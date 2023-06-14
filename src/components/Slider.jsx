@@ -1,31 +1,31 @@
 import { useState, useEffect } from "react";
 
 const Slider = () => {
-  const [swiper, setSwiper] = useState(null);
+  // const [swiper, setSwiper] = useState(null);
 
-  useEffect(() => {
-    const initializeSwiper = () => {
-      setSwiper(
-        new Swiper(".swiper-container", {
-          slidesPerView: "auto",
-          spaceBetween: 30,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        })
-      );
-    };
+  // useEffect(() => {
+  //   const initializeSwiper = () => {
+  //     setSwiper(
+  //       new Swiper(".swiper-container", {
+  //         slidesPerView: "auto",
+  //         spaceBetween: 30,
+  //         navigation: {
+  //           nextEl: ".swiper-button-next",
+  //           prevEl: ".swiper-button-prev",
+  //         },
+  //       })
+  //     );
+  //   };
 
-    initializeSwiper();
+  //   initializeSwiper();
 
-    // Cleanup Swiper instance on unmount
-    return () => {
-      if (swiper) {
-        swiper.destroy();
-      }
-    };
-  }, []);
+  //   // Cleanup Swiper instance on unmount
+  //   return () => {
+  //     if (swiper) {
+  //       swiper.destroy();
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div className="container">
@@ -76,9 +76,6 @@ const Slider = () => {
           </p>
           <a href="">Read More</a>
         </div>
-
-        <div className={`swiper-button-next ${styles.swiperButtonNext}`}></div>
-        <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}></div>
       </div>
     </div>
   );
